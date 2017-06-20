@@ -4,6 +4,7 @@ import com.webservice.database.Database;
 import com.webservice.model.Message;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
@@ -22,6 +23,18 @@ public class MessageService {
 
     public List<Message> getAllMessages() {
         return  new ArrayList<Message>(messages.values());
+    }
+
+    public List<Message> getAllMessageOfYear(int year){
+        List<Message> messageListOfYear = new ArrayList();
+        Calendar calendar = Calendar.getInstance();
+        for (Message message:messages.values()){
+            if(calendar.get(Calendar.YEAR) == year){
+                messageListOfYear.add(message);
+                System.out.println("Year If: "+year);
+            }
+        }
+        return messageListOfYear;
     }
 
     public Message getMessage(long messageId){

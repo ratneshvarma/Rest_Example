@@ -11,12 +11,12 @@ import java.util.Map;
  */
 public class Database {
     private static Map<Long, Message> messases= new HashMap();
-    private static Map<Long, Profile> profiles= new HashMap();
+    private static Map<String, Profile> profiles= new HashMap();
 
     public static Map<Long, Message> getMessages(){
          return messases;
      }
-    public static Map<Long, Profile> getProfiles(){
+    public static Map<String, Profile> getProfiles(){
         return profiles;
     }
 }

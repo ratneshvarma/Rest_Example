@@ -11,9 +11,8 @@ import java.util.List;
  * Created by ratnesh on 18/6/17.
  */
 
-@Path("/message")
+@Path("/messages")
 public class MessageResource {
-
     MessageService messageService = new MessageService();
 
     @GET
@@ -24,7 +23,12 @@ public class MessageResource {
             MediaType.APPLICATION_JSON,
             MediaType.TEXT_PLAIN
     })
-    public List<Message> getAllMessages() {
+
+    public List<Message> getAllMessages(@QueryParam("year") int year) {
+        if(year>0) {
+            System.out.println("year: "+year);
+            return  messageService.getAllMessageOfYear(year);
+        }
         return messageService.getAllMessages();
     }
 

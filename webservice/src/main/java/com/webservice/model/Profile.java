@@ -20,7 +20,7 @@ public class Profile {
     }
     public Profile(long profileId, String profileName, String firstName, String lastName){
         this.profileId= profileId;
-        this.prifileName= prifileName;
+        this.prifileName= profileName;
         this.firstName=firstName;
         this.lastName=lastName;
         this.created= new Date();
@@ -34,11 +34,11 @@ public class Profile {
         this.profileId = profileId;
     }
 
-    public String getPrifileName() {
+    public String getProfileName() {
         return prifileName;
     }
 
-    public void setPrifileName(String prifileName) {
+    public void setProfileName(String prifileName) {
         this.prifileName = prifileName;
     }
 
