@@ -14,8 +14,38 @@
     <dependency>
         <groupId>com.sun.jersey</groupId>
         <artifactId>jersey-server</artifactId>
-        <version>1.8</version>
+         <version>1.8</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet -->
+    <dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-servlet</artifactId>
+        <version>2.25.1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+    <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>2.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-moxy -->
+    <!--<dependency>-->
+        <!--<groupId>org.glassfish.jersey.media</groupId>-->
+        <!--<artifactId>jersey-media-moxy</artifactId>-->
+        <!--<version>2.25.1</version>-->
+    <!--</dependency>-->
+
+
+    <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json -->
+    <!--<dependency>-->
+        <!--<groupId>org.glassfish.jersey.media</groupId>-->
+        <!--<artifactId>jersey-media-json</artifactId>-->
+        <!--<version>2.0-m05-1</version>-->
+    <!--</dependency>-->
+
+
 </dependencies>
 <build>
         <plugins>
