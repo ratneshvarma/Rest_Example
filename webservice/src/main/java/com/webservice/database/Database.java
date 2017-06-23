@@ -10,6 +10,7 @@ import java.util.Map;
  * Created by ratnesh on 20/6/17.
  */
 public class Database {
+
     private static Map<Long, Message> messases= new HashMap();
     private static Map<String, Profile> profiles= new HashMap();
 

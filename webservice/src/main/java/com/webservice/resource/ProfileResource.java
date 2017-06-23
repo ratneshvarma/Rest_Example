@@ -12,8 +12,8 @@ import java.util.List;
  * Created by ratnesh on 20/6/17.
  */
 @Path("/profiles")
-@Consumes(MediaType.APPLICATION_XML)
-@Produces(MediaType.APPLICATION_XML)
+@Consumes( value={MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+@Produces( value={MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 public class ProfileResource {
     private ProfileService profileService = new ProfileService();
 
