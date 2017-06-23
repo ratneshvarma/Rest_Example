@@ -1,11 +1,12 @@
 package com.webservice.resource;
 
-import com.webservice.model.Message;
+import com.webservice.model.ErrorMessage;
 import com.webservice.model.Profile;
 import com.webservice.service.ProfileService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 /**
@@ -26,7 +27,7 @@ public class ProfileResource {
     @GET
     @Path("/{profileName}")
     public Profile getProfile(@PathParam("profileName") String profileName){
-        return profileService.getProfile(profileName);
+             return profileService.getProfile(profileName);
     }
 
     @POST

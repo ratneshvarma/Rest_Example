@@ -22,12 +22,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="webservice" />
         <module name="wWebservice" />
+      </profile>
+      <profile default="false" name="Annotation profile for webservice" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="webservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="webservice" target="1.5" />
+      <module name="webservice" target="1.6" />
       <module name="wWebservice" target="1.5" />
     </bytecodeTargetLevel>
   </component>

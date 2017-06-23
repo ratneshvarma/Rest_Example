@@ -1,8 +1,9 @@
 package com.webservice.service;
 
 import com.webservice.database.Database;
-import com.webservice.model.Message;
+import com.webservice.exception.DataNotFoundException;
 import com.webservice.model.Profile;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,9 @@ public class ProfileService {
     public List<Profile> getAllProfiles() {
         return  new ArrayList<Profile>(profiles.values());
     }
-    public Profile getProfile(String profileName){
+    public Profile getProfile(String profileName) throws DataNotFoundException {
+        if(profiles.get(profileName) == null)
+            throw new DataNotFoundException("ffffffffxsssss");
         return profiles.get(profileName);
     }
     public Profile addProfile(Profile profile){
