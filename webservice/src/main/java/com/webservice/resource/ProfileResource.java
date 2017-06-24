@@ -1,5 +1,6 @@
 package com.webservice.resource;
 
+import com.webservice.exception.DataNotFoundException;
 import com.webservice.model.ErrorMessage;
 import com.webservice.model.Profile;
 import com.webservice.service.ProfileService;
@@ -26,7 +27,7 @@ public class ProfileResource {
 
     @GET
     @Path("/{profileName}")
-    public Profile getProfile(@PathParam("profileName") String profileName){
+    public Profile getProfile(@PathParam("profileName") String profileName) throws DataNotFoundException{
              return profileService.getProfile(profileName);
     }
 

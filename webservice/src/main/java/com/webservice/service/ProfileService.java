@@ -25,7 +25,7 @@ public class ProfileService {
     }
     public Profile getProfile(String profileName) throws DataNotFoundException {
         if(profiles.get(profileName) == null)
-            throw new DataNotFoundException("ffffffffxsssss");
+            throw new DataNotFoundException("Data not found custom Exception occured.");
         return profiles.get(profileName);
     }
     public Profile addProfile(Profile profile){
